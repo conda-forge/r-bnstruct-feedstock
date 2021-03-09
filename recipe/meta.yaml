@@ -1,4 +1,4 @@
-{% set version = '1.0.8' %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bnstruct_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bnstruct/bnstruct_{{ version }}.tar.gz
-  sha256: 2f099214f165280b23ce1eda127bcba08732a4377991fb069f304559cb109da8
+  sha256: e04b443f0e71881efb670b2b100573c1393dcb4495f2b952f4d37e10919adf8e
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
 
   rpaths:
@@ -52,15 +52,12 @@ test:
 about:
   home: https://CRAN.R-project.org/package=bnstruct
   license: GPL-2.0-or-later
-  summary: Bayesian Network Structure Learning from Data with Missing Values. The package implements
-    the Silander-Myllymaki complete search, the Max-Min Parents-and-Children, the Hill-Climbing,
-    the Max-Min Hill-climbing heuristic searches, and the Structural Expectation-Maximization
-    algorithm. Available scoring functions are BDeu, AIC, BIC. The package also implements
-    methods for generating and using bootstrap samples, imputed data, inference.
+  summary: Bayesian Network Structure Learning from Data with Missing Values. The package implements the Silander-Myllymaki complete search, the Max-Min Parents-and-Children, the Hill-Climbing, the Max-Min Hill-climbing heuristic searches, and the Structural Expectation-Maximization algorithm. Available scoring functions
+    are BDeu, AIC, BIC. The package also implements methods for generating and using bootstrap samples, imputed data, inference.
 
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
     - LICENSE
 
 extra:
