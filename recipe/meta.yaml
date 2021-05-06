@@ -1,4 +1,4 @@
-{% set version = "1.0.9" %}
+{% set version = "1.0.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bnstruct_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bnstruct/bnstruct_{{ version }}.tar.gz
-  sha256: e04b443f0e71881efb670b2b100573c1393dcb4495f2b952f4d37e10919adf8e
+  sha256: d21c06aa4b4b15fa47206eeb6c67405464c7cbd443bbc9033e4acb0667a2720a
 
 build:
   merge_build_host: true  # [win]
