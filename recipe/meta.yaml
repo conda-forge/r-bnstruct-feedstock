@@ -31,13 +31,11 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix
     - r-bitops
     - r-igraph
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix
     - r-bitops
     - r-igraph
 
