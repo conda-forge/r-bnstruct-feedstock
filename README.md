@@ -3,6 +3,7 @@ About r-bnstruct-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bnstruct-feedstock/blob/main/LICENSE.txt)
 
+
 About r-bnstruct
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=bnstruct
 Package license: GPL-2.0-or-later
 
 Summary: Bayesian Network Structure Learning from Data with Missing Values. The package implements the Silander-Myllymaki complete search, the Max-Min Parents-and-Children, the Hill-Climbing, the Max-Min Hill-climbing heuristic searches, and the Structural Expectation-Maximization algorithm. Available scoring functions are BDeu, AIC, BIC. The package also implements methods for generating and using bootstrap samples, imputed data, inference.
+
 About r-bnstruct
 ----------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
