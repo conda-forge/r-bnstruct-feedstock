@@ -1,6 +1,5 @@
 {% set version = "1.0.15" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-bnstruct
@@ -13,8 +12,7 @@ source:
   sha256: 5fffb6e0ba368077d621915dd9d64d5b2db3c82cb267be8d5b1d8868b0aec33f
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -35,7 +35,6 @@ requirements:
     - r-igraph
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-bitops
     - r-igraph
 
